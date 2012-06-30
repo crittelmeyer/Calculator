@@ -11,6 +11,8 @@
 
 @implementation CalculatorTests
 
+static CalculatorBrain *brain;
+
 - (void)setUp
 {
     [super setUp];
@@ -30,14 +32,14 @@
 
 - (void)testPopOnNewBrain
 {
-    double d = [brain popOperand];
+    double d = [brain performOperation:@"+"];
     STAssertEqualsWithAccuracy(d, 0.0, 0.000001, @"pop on empty stack should be zero");
 }
 
 - (void)testPopOneOperand
 {
     [brain pushOperand:99.99];
-    double d = [brain popOperand];
+    double d = [brain performOperation:@"+"];
     STAssertEqualsWithAccuracy(d, 99.99, 0.000001, @"pop after push should return pushed operand");
 }
 
@@ -54,8 +56,38 @@
     [brain pushOperand:1.2];
     [brain pushOperand:3.4];
     [brain performOperation:@"+"];
-    double d = [brain popOperand];
+    double d = [brain performOperation:@"+"];
     STAssertEqualsWithAccuracy(d, 4.6, 0.000001, @"pop after perform should return correct value");
 }
+
+//- (void)testPopOnNewBrain
+//{
+//    double d = [brain popOperand];
+//    STAssertEqualsWithAccuracy(d, 0.0, 0.000001, @"pop on empty stack should be zero");
+//}
+//
+//- (void)testPopOneOperand
+//{
+//    [brain pushOperand:99.99];
+//    double d = [brain popOperand];
+//    STAssertEqualsWithAccuracy(d, 99.99, 0.000001, @"pop after push should return pushed operand");
+//}
+//
+//- (void)testPerformValueAfterOperation
+//{
+//    [brain pushOperand:1.2];
+//    [brain pushOperand:3.4];
+//    double d = [brain performOperation:@"+"];
+//    STAssertEqualsWithAccuracy(d, 4.6, 0.000001, @"perform should return the correct value");
+//}
+//
+//- (void)testPopValueAfterOperation
+//{
+//    [brain pushOperand:1.2];
+//    [brain pushOperand:3.4];
+//    [brain performOperation:@"+"];
+//    double d = [brain popOperand];
+//    STAssertEqualsWithAccuracy(d, 4.6, 0.000001, @"pop after perform should return correct value");
+//}
 
 @end
