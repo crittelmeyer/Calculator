@@ -401,7 +401,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clearPressed:" destination="2" eventType="touchUpInside" id="guC-ew-VeE"/>
+                                    <action selector="clearPressed" destination="2" eventType="touchUpInside" id="6Xe-1d-zAj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gZP-9s-zv8">

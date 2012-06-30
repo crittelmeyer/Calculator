@@ -40,11 +40,6 @@
     }
 }
 - (IBAction)enterPressed {
-    //prevents history display from being flooded with spaces if enter is pressed multiple times
-    if (self.history.text.length > 40) {
-        self.history.text = [self.history.text substringFromIndex:NSMaxRange([self.history.text rangeOfString:@" "])];
-    }
-    
     [self.brain pushOperand:[self.display.text doubleValue]];
     self.userIsInTheMiddleOfEnteringANumber = NO;
 
