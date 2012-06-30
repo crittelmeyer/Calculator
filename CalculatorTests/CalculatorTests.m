@@ -67,7 +67,7 @@ static CalculatorBrain *brain;
     [brain pushOperand:1.8];
     d = [brain performOperation:@"*"];
     d = [brain performOperation:@"*"];
-    d = [brain performOperation:@"sqrt"];
+    d = [brain performOperation:@"√"];
     STAssertEqualsWithAccuracy(d, 3.19042, 0.00001, @"perform should return the correct value");
 }
 
