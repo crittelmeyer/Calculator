@@ -60,6 +60,17 @@ static CalculatorBrain *brain;
     STAssertEqualsWithAccuracy(d, 4.6, 0.000001, @"pop after perform should return correct value");
 }
 
+- (void)testPerformPiExample
+{
+    double d = [brain performOperation:@"π"];
+    [brain pushOperand:1.8];
+    [brain pushOperand:1.8];
+    d = [brain performOperation:@"*"];
+    d = [brain performOperation:@"*"];
+    d = [brain performOperation:@"sqrt"];
+    STAssertEqualsWithAccuracy(d, 3.19042, 0.00001, @"perform should return the correct value");
+}
+
 //- (void)testPopOnNewBrain
 //{
 //    double d = [brain popOperand];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B238EC9159F7AEB00C21395 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB83CCD159448FC00E810FD /* CalculatorBrain.m */; };
 		7B5D9A26159E0182009D2A2E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5D9A25159E0182009D2A2E /* SenTestingKit.framework */; };
 		7B5D9A27159E0182009D2A2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB83CAF15943CBA00E810FD /* UIKit.framework */; };
 		7B5D9A28159E0182009D2A2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB83CB115943CBA00E810FD /* Foundation.framework */; };
@@ -256,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5D9A31159E0182009D2A2E /* CalculatorTests.m in Sources */,
+				7B238EC9159F7AEB00C21395 /* CalculatorBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +409,7 @@
 				7B5D9A34159E0182009D2A2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BB83CA515943CBA00E810FD /* Build configuration list for PBXProject "Calculator" */ = {
 			isa = XCConfigurationList;
